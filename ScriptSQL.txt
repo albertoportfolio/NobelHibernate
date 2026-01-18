@@ -1,0 +1,29 @@
+-- Create database
+CREATE DATABASE IF NOT EXISTS nobel_lit
+  CHARACTER SET utf8mb4
+  COLLATE utf8mb4_unicode_ci;
+
+USE nobel_lit;
+
+-- =========================
+-- Table: writers
+-- =========================
+CREATE TABLE IF NOT EXISTS writers (
+    id INT NOT NULL AUTO_INCREMENT,
+    author VARCHAR(255) NOT NULL,
+    award_year INT NOT NULL,
+    bio TEXT,
+    reason TEXT,
+    PRIMARY KEY (id)
+);
+
+-- =========================
+-- Table: works
+-- =========================
+CREATE TABLE IF NOT EXISTS works (
+    id INT NOT NULL AUTO_INCREMENT,
+    author_id INT NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    year INT NOT NULL,
+    PRIMARY KEY (id)
+);

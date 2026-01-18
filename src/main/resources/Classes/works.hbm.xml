@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="hibernateClasses">
+
+    <class name="Works" table="works">
+
+        <id name="id" column="id">
+            <generator class="increment"/>
+        </id>
+
+        <property name="authorId" column="author_id" type="int"/>
+        <property name="title" column="title" type="string"/>
+        <property name="year" column="year" type="int"/>
+
+    </class>
+
+</hibernate-mapping>
